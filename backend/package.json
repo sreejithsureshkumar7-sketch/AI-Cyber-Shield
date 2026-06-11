@@ -1,0 +1,14 @@
+{
+  "name": "ai-cyber-shield-backend",
+  "version": "1.0.0",
+  "description": "AI Cyber Shield backend API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "cors": "latest",
+    "express": "latest"
+  }
+}
