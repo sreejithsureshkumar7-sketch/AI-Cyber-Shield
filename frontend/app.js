@@ -1,4 +1,4 @@
-const API = 'http://localhost:5000/api';
+const API = 'https://ai-cyber-shield-k9ye.onrender.com/api';
 
 function scrollToTools(){ document.getElementById('tools').scrollIntoView({behavior:'smooth'}); }
 
