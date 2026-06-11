@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Cyber Shield</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="brand">🛡️ AI Cyber Shield</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#tools">Tools</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#assistant">AI Assistant</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div>
+      <p class="tag">Cyber Security + Full Stack + AI</p>
+      <h1>Protect accounts using AI based threat detection.</h1>
+      <p class="desc">Detect phishing links, weak passwords, suspicious logins, QR scams, and generate security reports.</p>
+      <button onclick="scrollToTools()">Start Scan</button>
+    </div>
+    <div class="hero-card">
+      <h3>Live Security Score</h3>
+      <div class="score" id="securityScore">86%</div>
+      <p>System Status: <span class="safe">Protected</span></p>
+    </div>
+  </section>
+
+  <section id="tools" class="section">
+    <h2>AI Security Tools</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>🔗 Phishing Link Detector</h3>
+        <input id="urlInput" placeholder="Paste website URL" />
+        <button onclick="scanURL()">Scan URL</button>
+        <p id="urlResult"></p>
+      </div>
+
+      <div class="card">
+        <h3>🔐 Password Analyzer</h3>
+        <input id="passwordInput" type="password" placeholder="Enter password" />
+        <button onclick="checkPassword()">Analyze</button>
+        <p id="passwordResult"></p>
+      </div>
+
+      <div class="card">
+        <h3>📍 Login Risk Detector</h3>
+        <input id="deviceInput" placeholder="Device name e.g. Android, Chrome" />
+        <input id="locationInput" placeholder="Location e.g. Chennai" />
+        <button onclick="checkLoginRisk()">Check Risk</button>
+        <p id="loginResult"></p>
+      </div>
+
+      <div class="card">
+        <h3>📷 QR Scam Checker</h3>
+        <input id="qrInput" placeholder="Paste QR URL text" />
+        <button onclick="scanQR()">Scan QR</button>
+        <p id="qrResult"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="dashboard" class="section dashboard">
+    <h2>Security Dashboard</h2>
+    <div class="grid">
+      <div class="stat"><span id="threatCount">3</span><p>Threat Alerts</p></div>
+      <div class="stat"><span>12</span><p>Login Attempts</p></div>
+      <div class="stat"><span>5</span><p>Safe Scans</p></div>
+      <div class="stat"><span>1</span><p>High Risk</p></div>
+    </div>
+    <button onclick="downloadReport()">Download Security Report</button>
+  </section>
+
+  <section id="assistant" class="section">
+    <h2>AI Security Assistant</h2>
+    <div class="chatbox">
+      <div id="chatMessages" class="messages">
+        <p><b>AI:</b> Hi! Ask me about phishing, passwords, OTP safety, or cyber security.</p>
+      </div>
+      <input id="chatInput" placeholder="Ask cyber security question..." onkeydown="if(event.key==='Enter') askAI()" />
+      <button onclick="askAI()">Ask</button>
+    </div>
+  </section>
+
+  <footer>Made by Sreejith | AI Cyber Shield Project</footer>
+  <script src="app.js"></script>
+</body>
+</html>
